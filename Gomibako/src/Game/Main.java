@@ -32,34 +32,18 @@ public class Main extends HttpServlet {
 
 		request.setCharacterEncoding("UTF-8");
 
-		//フォワード
+		//フォワード:DustBoxTopSiteより「level」を取得
 		String Level = request.getParameter("level");
+		System.out.println(Level);
 		//ビーンズをインスタンス化
 		Beans Beans = new Beans();
 		//Levelを保存
 		Beans.setLevel(Level);
-        System.out.println(Beans.getLevel());
-        request.setAttribute("Beans",Beans);
 
+        request.setAttribute("Beans",Beans);
 		//ゲーム画面へ
 		RequestDispatcher D = request.getRequestDispatcher("DustBox.jsp");
 		D.forward(request, response);
-
-		//Gage.jsからAとBの値をとってビーンズに保存
-		String A = request.getParameter("heightA");
-		Beans.setA(A);
-		String B = request.getParameter("powerB");
-		Beans.setB(B);
-
-		//Logicへ
-		RequestDispatcher DisLogic = request.getRequestDispatcher("Logic.java");
-
-
-
-		//Logic LG = new Logic();
-		//LG.execute(LG.getA);
-
-
 
 
 		}

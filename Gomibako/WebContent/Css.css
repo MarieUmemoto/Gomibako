@@ -6,7 +6,19 @@
 	width: 1200px;
 	height: 800px;
 	position: relative;
+	display:flex;
+	justify-content:center;
 }
+
+.target {
+	position: fixed;
+	top: 28px;
+	left: 28px;
+	width: 1200px;
+	height: 800px;
+	z-index: 255;
+}
+
 #timer1{/*高加減*/
     position: absolute;
     top: 50px;
@@ -93,8 +105,8 @@
 
 .POI{
 	position:absolute;
-	top:20px;
-	left:-50px;
+	bottom:80px;
+	right:250px;
 }
 
 .POI input{
@@ -104,10 +116,23 @@
   font-size:3em;
   font-weight: bold;
   background-color: #000000;
-  margin-left:420px;
-  margin-top:685px;
   width: 700px;
   height: 70px;
   border-style: none;
 
+}
+
+.target > p {
+	position: fixed;
+	top: 250px;
+	width: 1200px;
+	margin: 0px;
+	text-align: center;
+	font-size: 80px;
+	font-weight: bold;
+	background-color: rgba(65, 105, 225, 0.8);
+}
+
+.hidden {
+	display: none;
 }
